@@ -115,3 +115,10 @@ ecom-promo/
 2. **数据是同构的**，闭合误差恰好为 0；真实项目里误差 2%~5%，来自口径而非公式。
 3. **备货用正态近似**，真实需求有厚尾与断档，建议改用历史分位数或模拟法。
 4. **没算缺货的实际损失**——缺货率到 GMV 损失之间还差一个「替代购买率」，本项目没有这个数据。
+
+## 真实公开数据集
+
+本仓库在 `data/real/` 附带**真实公开数据集**（来源、许可与字段说明见 `data/real/SOURCES.md`）。
+运行 `python src/real_data_analysis.py` 可基于真实数据复现统计概览，输出到 `outputs/real_metrics.json` 与 `reports/real-data-notes.md`。
+
+> 说明：`data/`、`outputs/metrics.json` 中的主结果是脱敏/仿真案例，用于稳定演示方法论；`data/real/` 使用公开真实数据集验证同一套方法在真实数据上可运行。
